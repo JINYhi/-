@@ -33,27 +33,9 @@ LinkedList : LinkedList.o LinkedListMain.o
 Stack : ListBaseStack.o ListBaseStackMain.o
 	$(CC) -o $@ $^
 	./Stack
-
-Queue : ListBaseQueue.o ListBaseQueueMain.o
-	$(CC) -o $@ $^
-	./Queue
-
-PriorityQueue : PriorityQueue.o UsefulHeap.o PriorityQueueMain.o
-	$(CC) -o $@ $^
-	./PriorityQueue
-
-Sorting : SortingMain.o
-	$(CC) -o $@ $^
-	./Sorting
-
-BinarySerchTree : BinarySerchTreeMain.o
-	$(CC) -o $@ $^
-	./BinarySerchTree
-
-AVLTree : AVLRebalance.o BinarySearchTree3.o BinaryTree3.o AVLTreeMain.o
-	$(CC) -o $@ $^
-	./AVLTree
-
+~~~~~~~~~~~~~~~~~~~~~~~	
+~~~ 다 비슷한 형식 ~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 HashTable : DLinkedList.o Person.o Slot2.h Table2.o HashTableMain.o
 	$(CC) -o $@ $^
 	./HashTable
@@ -62,7 +44,10 @@ clean:
 	del *.o LinkedList.exe Stack.exe Queue.exe PriorityQueue.exe Sorting.exe BinarySerchTree.exe AVLTree.exe HashTable.exe
 ```
 
-- Makefile을 생성해 사용했습니다. 
-- make clean 사용 시 *.o 및 ㅁ.exe 파일들을 삭제하게 하였습니다.
-- make [이름]을 입력하면 자동으로 관련 파일을 찾아 오브젝트 파일을 자동으로 생성하도록 했고, 그 뒤 실행되게 했습니다.
+- **Makefile**을 생성해 분할컴파일을 진행했습니다. 
+- **make clean** 사용 시 *.o 및 ㅁ.exe **파일들을 삭제**하게 하였습니다.
+- make [이름]을 입력하면 자동으로 관련 파일을 찾아 **오브젝트 파일을 자동으로 생성**하도록 했고, **그 뒤 실행**되게 했습니다.
 
+## 3-1. 참고
+      - https://velog.io/@hidaehyunlee/Makefile-%EB%A7%8C%EB%93%A4%EA%B8%B0	 - https://ndb796.tistory.com/381
+      - https://losskatsu.github.io/programming/c-make/#%EB%A7%A4%ED%81%AC%EB%A1%9C-%EC%82%AC%EC%9A%A91
